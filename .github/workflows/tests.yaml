@@ -5,6 +5,9 @@ on:
     branches:
       - 'master'
       - 'next'
+      
+permissions:
+  contents: read
 
 jobs:
   tests:
