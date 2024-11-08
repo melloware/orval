@@ -167,7 +167,7 @@ ${
   )
   const data = await res.json()
 
-  ${override.fetch.includeHttpStatusReturnType ? 'return { status: res.status, data }' : `return data as ${responseTypeName}`}
+  ${override.fetch.includeHttpStatusReturnType ? 'return { status: res.status, data, headers?: res.headers }' : `return data as ${responseTypeName}`}
 `;
   const customFetchResponseImplementation = `return ${mutator?.name}<${retrunType}>(${fetchFnOptions});`;
 
